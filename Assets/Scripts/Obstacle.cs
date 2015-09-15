@@ -4,6 +4,7 @@ using System.Collections;
 public class Obstacle : MonoBehaviour {
 
     private Collider2D _wallCollider;
+
 	// Use this for initialization
 	void Start () {
         _wallCollider = GetComponent<Collider2D>();
@@ -11,10 +12,13 @@ public class Obstacle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	     if (Input.GetKeyDown(KeyCode.LeftControl))
+	     if (Input.GetKeyDown(KeyCode.LeftControl) && (Player.mana > 49) && (_wallCollider.enabled == true))
         {
             _wallCollider.enabled = false;
+            
+            Player.mana -= 50;
             obstacleColliderRemove();
+            
 	    }
     }
 
