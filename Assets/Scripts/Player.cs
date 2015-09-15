@@ -4,6 +4,7 @@ using System.Collections;
 public class Player : MonoBehaviour {
 	
     private float _moveSpeed = 0.1f;
+    public static int mana = 200;
     
 	// Use this for initialization
 	void Start () {
@@ -21,8 +22,6 @@ public class Player : MonoBehaviour {
         {
             transform.Translate(Vector2.left * _moveSpeed);
         }
-        
-		//transform.Translate(5f * Time.deltaTime, 0f, 0f);
 
 		if(Input.GetKey (KeyCode.Space))
 		{
