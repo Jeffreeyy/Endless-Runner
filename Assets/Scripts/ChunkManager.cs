@@ -4,10 +4,11 @@ using System.Collections.Generic;
 
 public class ChunkManager : MonoBehaviour
 {
-	public int moveSpeed = 5;
+	public float moveSpeed = 5;
     public List<GameObject> chunks = new List<GameObject>();
     private float _screenWidthGameUnits;
 	private bool added = false;
+    private bool _isIncreasingMoveSpeed = true;
 
 	private List<GameObject> _chunkClones = new List<GameObject>();
 
@@ -58,6 +59,22 @@ public class ChunkManager : MonoBehaviour
 			}
 		}
 
+    }
+
+    private void MoveSpeedIncrease()
+    {
+        if (_isIncreasingMoveSpeed == true)
+        {
+            _isIncreasingMoveSpeed = false;
+            StartCoroutine(MoveSpeedTimer());
+        }
+    }
+
+    IEnumerator MoveSpeedTimer()
+    {
+        yield return new WaitForSeconds(1);
+        moveSpeed += 0.01f;
+        Debug.Log(moveSpeed);
     }
 
     private void sortChunks(List<GameObject> _chunks)

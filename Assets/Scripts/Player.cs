@@ -39,7 +39,7 @@ public class Player : MonoBehaviour {
 			rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 		}
 
-		if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow) && mana > 49 && _isBlinking == false)
+		if((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && mana > 49 && _isBlinking == false)
 		{
 			_isBlinking = true;
 			mana -=50;

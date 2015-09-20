@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Score : MonoBehaviour {
 
-	private bool _isUpdatingScore = true;
+	Text Meters;
+    private bool _isUpdatingScore = true;
+    private float _secondsDelay = 0.5f;
+    private GUIStyle guiStyle = new GUIStyle();
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +19,13 @@ public class Score : MonoBehaviour {
 		ScoreCounter ();
 		Debug.Log (Player.score);
 	}
+
+    void OnGUI()
+    {
+        guiStyle.fontSize = 20;
+        GUI.contentColor = Color.black;
+        GUI.Label(new Rect(1480, 33, 50, 10), "Meters: " + Player.score, guiStyle);
+    } 
 
 	private void ScoreCounter()
 	{
@@ -34,7 +45,8 @@ public class Score : MonoBehaviour {
 
 	IEnumerator ScoreTimer()
 	{
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (_secondsDelay);
 		Player.score ++;
+        _isUpdatingScore = true;
 	}
 }
