@@ -14,10 +14,14 @@ public class ChunkManager : MonoBehaviour
     void Awake()
     {
         this._screenWidthGameUnits = this.getHalfScreenWidth();
+		for(int i = 0; i < 2; i++)
+		{
+			_chunkClones.Add(spawnChunk(chunks[4], (Vector3.zero)));
+		}
     }
 
     void Start()
-    {
+    {	
 		for (int i = 0; i < 3; i++)
 		{
 			_chunkClones.Add(getRandomChunk(Vector3.zero));
