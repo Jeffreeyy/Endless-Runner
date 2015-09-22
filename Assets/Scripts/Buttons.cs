@@ -18,5 +18,10 @@ public class Buttons : MonoBehaviour {
 		{
 			Application.LoadLevel("menu");
 		}
+
+		if (Input.GetKey(KeyCode.R) & Application.loadedLevelName == "gameover")
+		{
+			AutoFade.LoadLevel("game" ,0.5f,0.5f,Color.white);
+		}
 	}
 }

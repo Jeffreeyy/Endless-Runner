@@ -19,6 +19,9 @@ public class Player : MonoBehaviour {
 	void Awake () {
 		rb2d = GetComponent<Rigidbody2D> ();
 		audioSource = GetComponent<AudioSource>();
+		score = 0;
+		mana = 300;
+		ChunkManager.moveSpeed = 5;
 	}
 	
 	// Update is called once per frame
@@ -80,7 +83,7 @@ public class Player : MonoBehaviour {
 
 	private void GameOver ()
 	{
-		Time.timeScale = 0f;
+		Application.LoadLevel("gameover");
 	}
 
 
