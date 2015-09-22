@@ -74,7 +74,6 @@ public class ChunkManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         moveSpeed += 0.01f;
-        Debug.Log(moveSpeed);
     }
 
     private void sortChunks(List<GameObject> _chunks)

@@ -4,6 +4,7 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
 	private AudioSource audioSource;
+    public ParticleSystem particles;
     public float moveSpeed = 7f;
     public static int mana = 300;
 	public static int score = 0;
@@ -22,7 +23,6 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		Debug.Log (_blinkCooldown);
 		Movement ();
 		Raycasting ();
 
@@ -45,10 +45,12 @@ public class Player : MonoBehaviour {
 
 		if((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && mana > 49 && _isBlinking == false)
 		{
+            particles.Play();
 			audioSource.Play();
 			_isBlinking = true;
 			mana -=50;
-			transform.Translate(Vector2.right * 3);
+            gameObject.GetComponent<Renderer>().enabled = false;
+            SmallBlinkDelay();
 			BlinkDelay();
 		}
 
@@ -62,6 +64,19 @@ public class Player : MonoBehaviour {
 		}
 
 	}
+
+    private void SmallBlinkDelay()
+    {
+        StartCoroutine(SmallBlinkCooldown());
+    }
+
+    IEnumerator SmallBlinkCooldown()
+    {
+        yield return new WaitForSeconds(0.1f);
+        transform.Translate(Vector2.right * 3);
+        gameObject.GetComponent<Renderer>().enabled = true;
+    }
+
 	private void GameOver ()
 	{
 		Time.timeScale = 0f;
