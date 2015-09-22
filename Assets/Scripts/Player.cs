@@ -8,11 +8,12 @@ public class Player : MonoBehaviour {
     public float moveSpeed = 7f;
     public static int mana = 300;
 	public static int score = 0;
+    public static bool isBlinking = false;
 	public bool grounded = false;
 	public Transform groundedEnd;
 	public float jumpForce = 1f;
 	private Rigidbody2D rb2d;
-	private bool _isBlinking = false;
+	
 	private float _blinkCooldown = 1f;
 	// Use this for initialization
 	void Awake () {
@@ -43,11 +44,11 @@ public class Player : MonoBehaviour {
 			rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 		}
 
-		if((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && mana > 49 && _isBlinking == false)
+		if((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && mana > 49 && isBlinking == false)
 		{
             particles.Play();
 			audioSource.Play();
-			_isBlinking = true;
+			isBlinking = true;
 			mana -=50;
             gameObject.GetComponent<Renderer>().enabled = false;
             SmallBlinkDelay();
@@ -97,7 +98,7 @@ public class Player : MonoBehaviour {
 	IEnumerator CooldownTimer()
 	{
 		yield return new WaitForSeconds (_blinkCooldown);
-		_isBlinking = false;
+		isBlinking = false;
 		if(_blinkCooldown > 0f)
 		{
 			_blinkCooldown -= 0.05f;
