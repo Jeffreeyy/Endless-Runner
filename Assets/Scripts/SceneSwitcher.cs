@@ -10,7 +10,7 @@ public class SceneSwitcher : MonoBehaviour {
 
 	IEnumerator Example()
 	{
-		yield return new WaitForSeconds(5);
+		yield return new WaitForSeconds(2.6f);
 		AutoFade.LoadLevel("menu",2,1,Color.white);
 	}
 
