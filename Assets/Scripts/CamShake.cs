@@ -9,7 +9,7 @@ public class CamShake : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S) && Player.isBlinking == false && Player.mana > 49) 
+        if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && Player.isBlinking == false && Player.mana > 49) 
         {
             Shake();
         }
