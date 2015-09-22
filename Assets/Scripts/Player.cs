@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class Player : MonoBehaviour {
-	
+
+	private AudioSource audioSource;
     public float moveSpeed = 7f;
     public static int mana = 300;
 	public static int score = 0;
@@ -11,14 +12,17 @@ public class Player : MonoBehaviour {
 	public float jumpForce = 1f;
 	private Rigidbody2D rb2d;
 	private bool _isBlinking = false;
+	private float _blinkCooldown = 1f;
 	// Use this for initialization
 	void Awake () {
 		rb2d = GetComponent<Rigidbody2D> ();
+		audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		Debug.Log (_blinkCooldown);
 		Movement ();
 		Raycasting ();
 
@@ -41,6 +45,7 @@ public class Player : MonoBehaviour {
 
 		if((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && mana > 49 && _isBlinking == false)
 		{
+			audioSource.Play();
 			_isBlinking = true;
 			mana -=50;
 			transform.Translate(Vector2.right * 3);
@@ -60,7 +65,6 @@ public class Player : MonoBehaviour {
 	private void GameOver ()
 	{
 		Time.timeScale = 0f;
-
 	}
 
 
@@ -77,8 +81,12 @@ public class Player : MonoBehaviour {
 
 	IEnumerator CooldownTimer()
 	{
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (_blinkCooldown);
 		_isBlinking = false;
+		if(_blinkCooldown > 0f)
+		{
+			_blinkCooldown -= 0.05f;
+		}
 
 	}
 }

@@ -4,18 +4,11 @@ using UnityEngine.UI;
 
 public class ManaDisplay : MonoBehaviour {
 
-	Text Mana;
-	private GUIStyle guiStyle = new GUIStyle();
-
-    void OnGUI()
-    {
-		guiStyle.fontSize = 20;
-		GUI.contentColor = Color.black;
-		GUI.Label(new Rect(10, 33, 50, 10),"Mana: " + Player.mana, guiStyle);
-    }  
+	public Text manaText;
 
 	void Update()
 	{
+		UpdateUI ();
 		if(Player.mana == 300)
 		{
 			this.transform.position = new Vector3(-5f, 1.68f, 0f);
@@ -44,6 +37,11 @@ public class ManaDisplay : MonoBehaviour {
 		{
 			this.transform.position = new Vector3(-8.75f, 1.68f, 0f);
 		}
+	}
+
+	void UpdateUI ()
+	{
+		manaText.text = "Mana: " + Player.mana;
 	}
 }
 

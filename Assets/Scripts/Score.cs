@@ -4,28 +4,14 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour {
 
-	Text Meters;
+	public Text scoreText;
     private bool _isUpdatingScore = true;
-    private float _secondsDelay = 0.5f;
-    private GUIStyle guiStyle = new GUIStyle();
+    private float _secondsDelay = 1f;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
 	void Update () {
 		ScoreCounter ();
-		Debug.Log (Player.score);
+		UpdateUI ();
 	}
-
-    void OnGUI()
-    {
-        guiStyle.fontSize = 20;
-        GUI.contentColor = Color.black;
-        GUI.Label(new Rect(1480, 33, 50, 10), "Meters: " + Player.score, guiStyle);
-    } 
 
 	private void ScoreCounter()
 	{
@@ -33,7 +19,6 @@ public class Score : MonoBehaviour {
 		{
 			_isUpdatingScore = false;
 			ScoreDelay ();
-
 		}
 
 	}
@@ -43,10 +28,16 @@ public class Score : MonoBehaviour {
 		StartCoroutine (ScoreTimer ());
 	}
 
+	void UpdateUI ()
+	{
+		scoreText.text = "Time Survived: " + Player.score + " sec";
+	}
+
 	IEnumerator ScoreTimer()
 	{
 		yield return new WaitForSeconds (_secondsDelay);
 		Player.score ++;
+		ChunkManager.moveSpeed += 0.2f;
         _isUpdatingScore = true;
 	}
 }

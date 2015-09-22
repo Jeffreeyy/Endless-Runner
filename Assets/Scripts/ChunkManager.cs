@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class ChunkManager : MonoBehaviour
 {
-	public float moveSpeed = 5;
+	public static float moveSpeed = 5;
     public List<GameObject> chunks = new List<GameObject>();
     private float _screenWidthGameUnits;
 	private bool added = false;
