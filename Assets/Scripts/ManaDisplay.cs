@@ -41,7 +41,7 @@ public class ManaDisplay : MonoBehaviour {
 
 	void UpdateUI ()
 	{
-		manaText.text = "Mana: " + Player.mana;
+		manaText.text = "Mana: " + Player.mana + " / 300";
 	}
 }
 

@@ -7,6 +7,10 @@ public class Buttons : MonoBehaviour {
 	{
 		AutoFade.LoadLevel("game" ,1,1,Color.white);
 	}
+	public void HowToPlayGame()
+	{
+		Application.LoadLevel("howtoplay");
+	}
 	public void QuitGame()
 	{
 		Application.Quit ();
@@ -14,7 +18,7 @@ public class Buttons : MonoBehaviour {
 
 	public void Update()
 	{
-		if (Input.GetKey(KeyCode.Escape) & Application.loadedLevelName == "game")
+		if (Input.GetKey(KeyCode.Escape) & (Application.loadedLevelName == "game" || Application.loadedLevelName == "gameover" || Application.loadedLevelName == "howtoplay"))
 		{
 			Application.LoadLevel("menu");
 		}
