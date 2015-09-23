@@ -22,7 +22,11 @@ public class Player : MonoBehaviour {
 		score = 0;
 		mana = 300;
 		ChunkManager.moveSpeed = 5;
+<<<<<<< HEAD
 		isBlinking = false;
+=======
+        isBlinking = false;
+>>>>>>> origin/master
 	}
 	
 	// Update is called once per frame
