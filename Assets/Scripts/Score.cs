@@ -13,6 +13,7 @@ public class Score : MonoBehaviour {
 		UpdateUI ();
 	}
 
+	//Counts the score and calls the delay
 	private void ScoreCounter()
 	{
 		if(_isUpdatingScore == true)

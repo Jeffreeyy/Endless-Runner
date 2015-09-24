@@ -9,6 +9,7 @@ public class CamShake : MonoBehaviour
 
     void Update()
     {
+		//When S or down arrow is pressed use shake
         if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && Player.isBlinking == false && Player.mana > 49) 
         {
             Shake();

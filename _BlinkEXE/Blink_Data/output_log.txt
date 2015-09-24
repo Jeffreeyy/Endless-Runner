@@ -1,0 +1,87 @@
+Initialize engine version: 5.1.3f1 (b0a23b31c3d8)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 850M   (ID=0x1391)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Jeffrey\Documents\Opleiding\bewijzenmap\leerjaar2\periode1\pro\Endless-Runner\_BlinkEXE\Blink_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Jeffrey\Documents\Opleiding\bewijzenmap\leerjaar2\periode1\pro\Endless-Runner\_BlinkEXE\Blink_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Jeffrey\Documents\Opleiding\bewijzenmap\leerjaar2\periode1\pro\Endless-Runner\_BlinkEXE\Blink_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Jeffrey\Documents\Opleiding\bewijzenmap\leerjaar2\periode1\pro\Endless-Runner\_BlinkEXE\Blink_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Jeffrey\Documents\Opleiding\bewijzenmap\leerjaar2\periode1\pro\Endless-Runner\_BlinkEXE\Blink_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Jeffrey\Documents\Opleiding\bewijzenmap\leerjaar2\periode1\pro\Endless-Runner\_BlinkEXE\Blink_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Jeffrey\Documents\Opleiding\bewijzenmap\leerjaar2\periode1\pro\Endless-Runner\_BlinkEXE\Blink_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Jeffrey\Documents\Opleiding\bewijzenmap\leerjaar2\periode1\pro\Endless-Runner\_BlinkEXE\Blink_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Jeffrey\Documents\Opleiding\bewijzenmap\leerjaar2\periode1\pro\Endless-Runner\_BlinkEXE\Blink_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Jeffrey\Documents\Opleiding\bewijzenmap\leerjaar2\periode1\pro\Endless-Runner\_BlinkEXE\Blink_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\Jeffrey\Documents\Opleiding\bewijzenmap\leerjaar2\periode1\pro\Endless-Runner\_BlinkEXE\Blink_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.077 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Jeffrey\Documents\Opleiding\bewijzenmap\leerjaar2\periode1\pro\Endless-Runner\_BlinkEXE\Blink_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2168 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.188787 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 208.
+Total: 0.473315 ms (FindLiveObjects: 0.037502 ms CreateObjectMapping: 0.031975 ms MarkObjects: 0.377783 ms  DeleteObjects: 0.024080 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.745620 ms
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 397.
+Total: 0.359624 ms (FindLiveObjects: 0.038686 ms CreateObjectMapping: 0.027238 ms MarkObjects: 0.274356 ms  DeleteObjects: 0.017764 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.386313 ms
+
+Unloading 171 unused Assets to reduce memory usage. Loaded Objects now: 198.
+Total: 0.601611 ms (FindLiveObjects: 0.041054 ms CreateObjectMapping: 0.045397 ms MarkObjects: 0.368704 ms  DeleteObjects: 0.145665 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.543187 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 399.
+Total: 0.301990 ms (FindLiveObjects: 0.024869 ms CreateObjectMapping: 0.021711 ms MarkObjects: 0.240802 ms  DeleteObjects: 0.013816 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.944656 ms
+
+Unloading 171 unused Assets to reduce memory usage. Loaded Objects now: 198.
+Total: 0.523054 ms (FindLiveObjects: 0.049739 ms CreateObjectMapping: 0.058029 ms MarkObjects: 0.290542 ms  DeleteObjects: 0.123559 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.498974 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 399.
+Total: 0.523844 ms (FindLiveObjects: 0.057239 ms CreateObjectMapping: 0.037896 ms MarkObjects: 0.405416 ms  DeleteObjects: 0.021316 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.152221 ms
+
+Unloading 171 unused Assets to reduce memory usage. Loaded Objects now: 198.
+Total: 0.848730 ms (FindLiveObjects: 0.053687 ms CreateObjectMapping: 0.054871 ms MarkObjects: 0.553845 ms  DeleteObjects: 0.184352 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.435813 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 399.
+Total: 0.304753 ms (FindLiveObjects: 0.025264 ms CreateObjectMapping: 0.022501 ms MarkObjects: 0.241592 ms  DeleteObjects: 0.015000 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.823465 ms
+
+Unloading 171 unused Assets to reduce memory usage. Loaded Objects now: 198.
+Total: 0.435813 ms (FindLiveObjects: 0.028027 ms CreateObjectMapping: 0.031975 ms MarkObjects: 0.258171 ms  DeleteObjects: 0.116848 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.016502 ms
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 215.
+Total: 0.568846 ms (FindLiveObjects: 0.035528 ms CreateObjectMapping: 0.030791 ms MarkObjects: 0.469762 ms  DeleteObjects: 0.031580 ms)
+

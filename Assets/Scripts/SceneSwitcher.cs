@@ -5,10 +5,10 @@ public class SceneSwitcher : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(Example());
+		StartCoroutine(FadeIntro());
 	}
 
-	IEnumerator Example()
+	IEnumerator FadeIntro()
 	{
 		yield return new WaitForSeconds(2.6f);
 		AutoFade.LoadLevel("menu",2,1,Color.white);

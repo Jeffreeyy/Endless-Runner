@@ -18,23 +18,21 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		rb2d = GetComponent<Rigidbody2D> ();
-		audioSource = GetComponent<AudioSource>();
+		audioSource = GetComponent<AudioSource> ();
+
+		//Set all variables to the original values
 		score = 0;
 		mana = 300;
 		ChunkManager.moveSpeed = 5;
-<<<<<<< HEAD
 		isBlinking = false;
-=======
-        isBlinking = false;
->>>>>>> origin/master
 	}
-	
 	// Update is called once per frame
 	void Update ()
 	{
 		Movement ();
 		Raycasting ();
 
+		//Check if player is out of the screen
 		if(this.transform.position.x < -7f || this.transform.position.x > 7f)
 		{
 			GameOver();
@@ -52,6 +50,7 @@ public class Player : MonoBehaviour {
 			rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 		}
 
+		//Blink when key is pressed
 		if((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && mana > 49 && isBlinking == false)
 		{
             particles.Play();
@@ -63,6 +62,7 @@ public class Player : MonoBehaviour {
 			BlinkDelay();
 		}
 
+		//Check if the player is off the ground, then reduce the movespeed
 		if (grounded == false)
 		{
 			moveSpeed = 5f;
@@ -91,7 +91,7 @@ public class Player : MonoBehaviour {
 		Application.LoadLevel("gameover");
 	}
 
-
+	//Function checks if the player is hitting the ground
 	private void Raycasting()
 	{
 		Debug.DrawLine (this.transform.position, groundedEnd.position, Color.green);

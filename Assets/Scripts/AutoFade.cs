@@ -1,5 +1,4 @@
-﻿// AutoFade.cs
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 public class AutoFade : MonoBehaviour
 {

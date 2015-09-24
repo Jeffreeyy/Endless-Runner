@@ -9,6 +9,7 @@ public class ManaDisplay : MonoBehaviour {
 	void Update()
 	{
 		UpdateUI ();
+		//Check how much mana the player has
 		if(Player.mana == 300)
 		{
 			this.transform.position = new Vector3(-5f, 1.68f, 0f);
